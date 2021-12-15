@@ -25,6 +25,13 @@ class Home extends StatelessWidget {
                 // );
                 Get.to(FirstPage());
               },
+            ),
+            RaisedButton(
+              child: const Text("네임드 라우트"),
+              onPressed: () {
+                // Navigator.of(context).pushNamed("/first");
+                Get.toNamed("/first");
+              },
             )
           ],
         ),
