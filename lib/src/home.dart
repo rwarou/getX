@@ -32,10 +32,25 @@ class Home extends StatelessWidget {
                 // Navigator.of(context).pushNamed("/first");
                 Get.toNamed("/first");
               },
+            ),
+            RaisedButton(
+              child: const Text("arguments 전달"),
+              onPressed: () {
+                // Navigator.of(context).pushNamed("/first");
+                Get.toNamed("/next", arguments: User(name: "rwarou", age: 29));
+                // Get.to(FirstPage(), arguments: "rwarou");
+              },
             )
           ],
         ),
       ),
     );
   }
+}
+
+class User {
+  String name;
+  int age;
+
+  User({required this.name, required this.age});
 }
