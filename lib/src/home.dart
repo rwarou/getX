@@ -40,6 +40,12 @@ class Home extends StatelessWidget {
                 Get.toNamed("/next", arguments: User(name: "rwarou", age: 29));
                 // Get.to(FirstPage(), arguments: "rwarou");
               },
+            ),
+            RaisedButton(
+              child: const Text("동적 url 전달"),
+              onPressed: () {
+                Get.toNamed("/user/1234?name=rwarou&age=29");
+              },
             )
           ],
         ),
