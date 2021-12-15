@@ -27,6 +27,9 @@ class SecondPage extends StatelessWidget {
               child: const Text("홈으로 이동"),
               onPressed: () {
                 // Get.to(Home());
+                // Navigator.of(context).pushAndRemoveUntil(
+                //     MaterialPageRoute(builder: (_) => Home()),
+                //     (route) => false);
                 Get.offAll(Home());
               },
             )
